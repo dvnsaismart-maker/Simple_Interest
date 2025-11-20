@@ -1,1 +1,10 @@
-SI = (Principal × Rate × Time) / 100
+#!/bin/bash
+# Calculate Simple Interest
+# Formula: SI = (P * R * T) / 100
+
+read -p "Enter Principal: " P
+read -p "Enter Rate of Interest: " R
+read -p "Enter Time (in years): " T
+
+SI=$(echo "scale=2; ($P * $R * $T) / 100" | bc)
+echo "Simple Interest = $SI"
